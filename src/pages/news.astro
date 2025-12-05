@@ -1,0 +1,83 @@
+---
+import "./styles/style.css"
+import Navigation from "./Components/Navigation.astro"
+import Jhfooter from "./Components/Jhfooter.astro"
+
+
+---
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+
+
+<body>
+
+        <header>
+				<Navigation/>
+
+		</header>
+
+    <section class="news-container">
+
+        <article class="news-post">
+            <img src="/images/News1.jpg" alt="Jimi Hendrix Woodstock">
+            <h2>Jimi Hendrix’s Estate Keeps His Musical Legacy Alive</h2>
+            
+               <p>Experience Hendrix L.L.C. was formed thirty years ago in 1995. The company has been responsible for revitalizing the catalog, image, and earnings of the most famous and influential electric guitarist in history, Jimi Hendrix. Since its establishment, the organization led by Jimi’s sister, Janie Hendrix, has compiled an extensive series of archival album releases, made film documentaries, launched annual tours with respected artists performing the guitarist’s music (apart from a recent five-year hiatus), engaged in merchandising, and published historical articles on their official website.
+                    </p> 
+               <p>September 18 marks the fifty-fifth anniversary of Hendrix’s death in London. He landed in England in September 1966 and launched his own artistic revolution, a world away from his roots in Seattle and his endless series of back-up gigs across America with R&B acts including the Isley Brothers. Without his inimitable style, his self-assured performance, and stylistic innovations, neither the electric guitar nor popular music would ever be the same.
+                    </p> 
+                <p>This landmark anniversary will be followed by the November 7 release of a new deluxe edition of the second Jimi Hendrix Experience album Axis: Bold as Love. The original record was first released in December 1967 in Britain and Europe, and in America on January 10, 1968, and was certified platinum in 1986. This article examines how Hendrix’s recorded music legacies have been curated and sustained since the mid-1990s.
+                    </p>
+        </article>
+
+        <article class="news-post">
+            <img src="/images/news2.jpg" alt="Jimi Hendrix guitar auction">
+            <h2>Studio used by Hendrix, Bowie and the Stones to reopen after decades silent</h2>
+            
+              <p>The Regent Sounds recording studio on “Tin Pan Alley” in London was famously used by Jimi Hendrix, David Bowie and the Rolling Stones between the 1960s and early 1980s. Now, having been walled up and lain silent for decades, it is being brought back to life through a multimillion-pound investment that will turn it into a landmark site for rock’n’roll, jazz and blues, the Guardian has learned.
+                </p>
+               <p>Much of the original walls, floor tiles and recording equipment have been preserved from a studio that Pete Townshend, The Who’s guitarist and songwriter, once described as “a massive chunk of rock music history”.
+                </p> 
+               <p>An archive of memorabilia has been unearthed and historic items will be shown in exhibitions at the site on Denmark Street, nicknamed Tin Pan Alley as a historic hub for music publishers, instrument shops and songwriters since the early 20th century.
+                </p> 
+        </article>
+
+        <article class="news-post">
+            <img src="/images/News3.jpg" alt="Hendrix exhibition London">
+            <h2>Newly found Jimi Hendrix tapes give fans chance to own song only they can listen to</h2>
+            <p>
+               In the 54 years since Jimi Hendrix’s death, every part of his archive has been mined for fresh material. Recordings of long-forgotten gigs, obscure B-sides and abandoned demos have all been released.
+            </p>
+                <p>But it appears that not everything the American rock guitarist, singer and composer recorded has seen the light of day. Newly unearthed master tapes with never-before-heard tracks are now up for sale in an auction of Hendrix memorabilia.
+                </p>
+                <p>The unreleased 1968 demos, which are said to be “very different in sound and length” from better-known versions, run for seven minutes and include Up From the Skies, Ain’t No Telling, Little Miss Lover and Stone Free. That tape alone is expected to sell for up to £200,000.
+                            </p>
+        </article>
+
+    </section>
+
+
+</body>
+
+
+    <footer>
+		<Jhfooter/>
+	</footer>
+
+</html>

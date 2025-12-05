@@ -1,0 +1,84 @@
+---
+import "./styles/style.css"
+import Navigation from "./Components/Navigation.astro"
+import Jhfooter from "./Components/Jhfooter.astro"
+
+
+---
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../css/playlist.css">
+		
+		<title>Astro</title>
+	</head>
+
+	<body>
+
+        
+
+ 	<body>
+		<header>
+				<Navigation/>
+
+		</header>
+		
+
+	<section class="playlist-box">
+  	<div class="playlist-layout">
+
+		<!-- Portada de álbum -->
+		<div class="album-cover">
+			<img src="/images/Voodoo_Child.jpg" alt="Jimi Hendrix album cover">
+		</div>
+
+			<!-- Contenido de la playlist -->
+			<div class="playlist-content">
+				<h1>Song Titles</h1>
+
+				<!-- Lista ORDENADA para que se vean 1,2,3... -->
+				<ol id="songList" class="song-list"></ol>
+
+				<!-- Controles -->
+					<div class="playlist-controls">
+						<input
+						type="text"
+						id="songInput"
+						class="songInput"
+						placeholder="Add a new song"
+						>
+
+						<button id="addSongBtn" class="addSongBtn">Add Song</button>
+						<button id="shuffleBtn" class="shuffle">Shuffle Songs</button>
+					</div>
+   		 	</div>
+
+  	</div>
+</section>
+
+		<!-- IMPORTANTE EN ASTRO: el JS en /public -->
+		<script src="/playlist.js" defer></script>
+		
+	</body>
+
+
+	<footer>
+		<Jhfooter/>
+	</footer>
+
+
+</html>

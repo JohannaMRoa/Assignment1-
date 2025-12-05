@@ -1,4 +1,387 @@
-h1 {
-    font-family: Arial, Helvetica, sans-serif ;
+/* fonts*/
 
+ h1, h2,  nav {
+    font-family: 'Staatliches', sans-serif;
+}
+
+h1, h2 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+p,h3 {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/Jimi Hendrix.jpg");
+    background-repeat: no-repeat;
+    background-size: 130% auto;
+    background-position: 0% 50%;
+    animation: groovy-trip 30s linear infinite alternate;
+
+    z-index: -1;          
+    filter: hue-rotate(0deg);
+}
+
+@keyframes groovy-trip {
+    0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+    50% { background-position: 100% 50%; filter: hue-rotate(20deg); }
+    100% { background-position: 0% 50%; filter: hue-rotate(-15deg); }
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------
+/* INDEX */
+
+.Group_JH {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.JH_landing {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+}
+
+.JH_sig {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.JH_sig svg {
+    width: 40%;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.4s ease-out;
+}
+.JH_sig svg:hover {
+    width: 45%;
+    height: auto;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease-out;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------
+/* News */
+
+.newsletter-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 90px 20px;
+}
+
+.newsletter-box {
+    background-color: rgba(244, 102, 12, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 48px 40px;
+    width: 90%;
+    margin:auto;
+    text-align: center;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.28);
+}
+
+.newsletter-box:hover {
+    background-color: rgba(244, 102, 12, 0.9);
+}
+
+
+.newsletter-btn {
+    background-color: #fff;
+    color: #f4660c;
+    font-weight: bold;
+    padding: 14px 22px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.newsletter-btn:hover {
+    background-color: #f9e4bd;
+    transform: scale(1.03);
+}
+
+.newsletter-note {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.news-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2.5rem;
+}
+
+
+.news-post {
+    background: rgba(133,55,164,0.35); 
+    padding: 1.8rem;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.news-post:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(133,55,164,0.5);
+}
+
+
+.news-post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+
+.news-post h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.9rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.news-post p {
+    color: #e6e6e6;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (min-width: 900px) {
+    .news-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.news-post:first-child {
+    grid-column: span 2;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* Bio*/
+.bio_box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    width: 90%;
+    background: rgba(90, 36, 138, 0.55);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.Biography_JH {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+
+.bio_img img {
+    width: 100%;
+    max-width:auto;
+    z-index: 20;
+}
+
+.bio_img img:hover {
+    transform: translateY(-20px);
+    transition: transform 0.4s ease-out;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------
+/* playlist */
+/* Caja principal */
+.playlist-box {
+  background: rgba(244, 102, 12, 0.85);      /* mismo naranja, con opacidad */
+  width: 50%;
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.28);
+  font-family: "Roboto", sans-serif;
+}
+
+/* layout tipo portada + lista */
+.playlist-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+}
+
+/* portada de álbum */
+.album-cover img {
+  width: 260px;
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 18px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+}
+
+/* texto de la parte derecha */
+.playlist-content {
+  flex: 1;
+  text-align: left;
+}
+
+.playlist-content h1 {
+  text-align: left;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+
+.song-list {
+  list-style: none;      
+  margin: 0;
+  padding: 0;
+}
+
+/* cada canción */
+.song-list li {
+    position: relative;
+    padding: 0.3rem 0.3rem;
+    margin: 0rem 1rem 1rem 1rem;
+    border-radius: 50px;           
+    cursor: pointer;
+    
+    font-family:'Staatliches', sans-serif; 
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+    transition: color .25s ease;
+    overflow: hidden;              
+}
+
+.song-list li:hover {
+    background-color: rgba(133, 55, 164, 0.6);
+    color: #fac800;    
+    padding-left: 1rem;  
+    width: 70%;                    
+}
+
+
+/* controles: input + botones */
+.playlist-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.songInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.addSongBtn,
+.shuffle {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #f4660c;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+  background-color 0.15s ease;
+}
+
+/* hover y click tipo botón con relieve */
+.addSongBtn:hover,
+.shuffle:hover {
+  background-color: #f9e4bd;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.addSongBtn:active,
+.shuffle:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* responsive: en móvil portada arriba, lista abajo */
+@media (max-width: 768px) {
+  .playlist-box {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .playlist-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .playlist-content {
+    text-align: center;
+  }
+
+  .song-list {
+    padding-left: 1rem;
+    text-align: left;
+  }
 }

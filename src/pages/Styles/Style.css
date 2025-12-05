@@ -97,7 +97,6 @@ body::before {
 
 /* -------------------------------------------------------------------------------------------------------------
 /* News */
-
 .newsletter-wrapper {
     display: flex;
     justify-content: center;
@@ -204,6 +203,7 @@ body::before {
 }
 
 
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* Bio*/
 .bio_box {
@@ -226,7 +226,6 @@ body::before {
 }
 
 
-
 .bio_img img {
     width: 100%;
     max-width:auto;
@@ -243,9 +242,9 @@ body::before {
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------
 /* playlist */
-/* Caja principal */
+
 .playlist-box {
-  background: rgba(244, 102, 12, 0.85);      /* mismo naranja, con opacidad */
+  background: rgba(244, 102, 12, 0.85);     
   width: 50%;
   max-width: 1100px;
   margin: 6rem auto;
@@ -257,14 +256,13 @@ body::before {
   font-family: "Roboto", sans-serif;
 }
 
-/* layout tipo portada + lista */
 .playlist-layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2.5rem;
 }
 
-/* portada de álbum */
+
 .album-cover img {
   width: 260px;
   max-width: 100%;
@@ -274,7 +272,7 @@ body::before {
   object-fit: cover;
 }
 
-/* texto de la parte derecha */
+
 .playlist-content {
   flex: 1;
   text-align: left;
@@ -294,7 +292,7 @@ body::before {
   padding: 0;
 }
 
-/* cada canción */
+
 .song-list li {
     position: relative;
     padding: 0.3rem 0.3rem;
@@ -318,7 +316,7 @@ body::before {
 }
 
 
-/* controles: input + botones */
+
 .playlist-controls {
   display: flex;
   flex-wrap: wrap;
@@ -350,7 +348,7 @@ body::before {
   background-color 0.15s ease;
 }
 
-/* hover y click tipo botón con relieve */
+
 .addSongBtn:hover,
 .shuffle:hover {
   background-color: #f9e4bd;
@@ -364,7 +362,7 @@ body::before {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
-/* responsive: en móvil portada arriba, lista abajo */
+
 @media (max-width: 768px) {
   .playlist-box {
     width: 90%;
